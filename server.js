@@ -21,13 +21,10 @@ hbs.registerPartials(__dirname + '/views/partials');  // шаблоны hbs
 
 app.get('/', (req, res) => {
     // выгружаем все записи из БД
-    let allComments;
     Comment.find().then((comments) => {
-        allComments = comments;
-
         // рендерим
         res.render('gb.hbs', {
-            allComments: allComments
+            allComments: comments
         });
     }, (err) => {
         console.log(err);

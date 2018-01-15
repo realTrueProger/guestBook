@@ -1,0 +1,22 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+input {
+    width: 200px;
+}
+
+input[type = "submit"] {
+    width: 100px;
+}
+
+table {
+    margin: 0 auto;
+}

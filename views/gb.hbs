@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GuestBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container"><h1>Добро пожаловать</h1>
+    <p>Ниже можете оставить свой отзыв в гостевой книге:</p>
+    <form action="/addComment" method="post">
+        <fieldset>
+            <legend>Ваш отзыв</legend>
+            <table>
+                <tr>
+                    <td>Ваше имя:</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Отзыв: </td>
+                    <td><input type="text" name="comment"></td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <h3>Отзывы:</h3>
+    {{#if allComments}}
+        {{#each allComments}}
+            <p>{{this.name}} : {{this.comment}}</p>
+        {{/each}}
+    {{/if}}
+</div>
+
+</body>
+</html>
